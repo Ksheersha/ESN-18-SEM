@@ -83,4 +83,3 @@ pswd: fsebigboss17
  * [Canvas uses cases page](https://canvas.cmu.edu/courses/893/pages/use-cases-se-project-requirements?module_item_id=53086)
  * [Iteration requirements](https://canvas.cmu.edu/courses/893/modules#context_module_8918)
 
-
