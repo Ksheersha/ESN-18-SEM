@@ -1,0 +1,19 @@
+block content
+    .container#org-tracking-map-window(style='display: none')
+        .row
+            #org-tracking-list.col-5
+                .card.card-body
+                    .card-header
+                        card-title 
+                            i.material-icons.md-16(style="font-size:14px") supervisor_account
+                            | Personnel
+                    ul.list-group.list-group-flush(style="padding-left: 0rem")#org-people-list
+                .card.card-body
+                    .card-header
+                        card-title 
+                            i.material-icons.md-16(style="font-size:14px") directions_car
+                            | Vehicles
+                    ul.list-group.list-group-flush(style="padding-left: 0rem")#org-vehicle-list
+            #org-tracking-list-trigger.div
+                    i.material-icons.md-24.md-light#map_tracking_trigger_button(style="color:black") indeterminate_check_box
+        .row#div-map-area

@@ -1,0 +1,163 @@
+extends layout
+
+block content
+    #id.page-hidden-info #{user.id}
+    #userName.page-hidden-info #{user.username}
+    #role.page-hidden-info #{user.role}
+    #userStatus.page-hidden-info #{user.status.status}
+    #userPhone.page-hidden-info #{user.phoneNumber}
+    #incidentId.page-hidden-info
+    #group911Id.page-hidden-info #{group911Id}
+
+    include navbar.pug
+
+    .container#mainPage(style="display: none;")
+        .panel
+            a#pubChatBtn.btn.btn-raised.btn-block
+                span.text-light.align-middle Messages
+                i.material-icons.md-24.md-light.main-btn-icon.align-middle forum
+            a#userListBtn.btn.btn-raised.btn-block
+                span.text-light.align-middle Contacts
+                i.material-icons.md-24.md-light.main-btn-icon.align-middle perm_contact_calendar
+            a#announcementBtn.btn.btn-raised.btn-block
+                span.text-light.align-middle Announcements
+                i.material-icons.md-24.md-light.main-btn-icon.align-middle announcement
+            a#groupsBtn.btn.btn-raised.btn-block
+                span.text-light.align-middle Groups
+                i.material-icons.md-24.md-light.main-btn-icon.align-middle people
+            a#mapBtn.btn.btn-raised.btn-block
+                span.text-light.align-middle Map
+                i.material-icons.md-24.md-light.main-btn-icon.align-middle place
+            a#statusBtn.btn.btn-raised.btn-block(style="display: none;")
+                span.text-light.align-middle Share Status
+                i.material-icons.md-24.md-light.main-btn-icon.align-middle face
+            a#organizationBtn.btn.btn-raised.btn-block(style="display: none;")
+                span.text-light.align-middle Organizations
+                i.material-icons.md-24.md-light.main-btn-icon.align-middle group_work
+            a#situationsBtn.btn.btn-raised.btn-block(style="display: none;")
+                span.text-light.align-middle Situations
+                i.material-icons.md-24.md-light.main-btn-icon.align-middle near_me
+            a#911Btn.btn.btn-raised.btn-block.btn-danger(style="display: none;")
+                span.text-light.align-middle 911
+            a#incidentsBtn.btn.btn-raised.btn-block(style="display: none;")
+                span.text-light.align-middle Incidents
+                i.material-icons.md-24.md-light.main-btn-icon.align-middle error
+            a#resourceAllocationBtn.btn.btn-raised.btn-block(style="display: none;")
+                span.text-light.align-middle Resource Allocation
+            a#bedsAvailableBtn.btn.btn-raised.btn-block(style="display: none;")
+                span.text-light.align-middle Beds Available
+                i.material-icons.md-24.md-light.main-btn-icon.align-middle local_hotel
+            a#patientsBtn.btn.btn-raised.btn-block(style="display: none;")
+                span.text-light.align-middle Patients
+            a#firstAidBtn.btn.btn-raised.btn-block(style="display: none;")
+                span.text-light.align-middle First Aid
+            a#findHospitalBtn.btn.btn-raised.btn-block(style="display: none;")
+                span.text-light.align-middle Find Hospital
+            a#dashboardBtn.btn.btn-raised.btn-block(style="display: none;")
+                span.text-light.align-middle Dashboard
+                i.material-icons.md-24.md-light.main-btn-icon.align-middle assessment
+
+    include publicChat.pug
+    include userlist.pug
+    include annoucement.pug
+    include status.pug
+    include supply.pug
+    include map.pug
+    include privateChat.pug
+    include userProfile.pug
+    include incident.pug
+    include incidentDispatcher.pug
+    include incidentFirstResponder.pug
+    include patient.pug
+    include patientsDirectory.pug
+    include group.pug
+    include organization.pug
+    include hospital.pug
+    include resources.pug
+    include resourceReqDirectory
+    include alertPanel.pug
+    include hospitalDirectory.pug
+    include fireTruckDirectory.pug
+    include truckResourceInventory.pug
+    include erbed.pug
+    include dashboard.pug
+    include situations.pug
+    include newSituation.pug
+    include orgTracking.pug
+    include findHospital.pug
+    include requestResource.pug
+    include nurseDirectory.pug
+    include firstAidInstruction.pug
+    include instruction.pug
+
+block js
+    script(src="/socket.io/socket.io.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.min.js")
+    //- script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8CxGINkAxCl4XTw0escUp9l7PM5hUfWg")
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8CxGINkAxCl4XTw0escUp9l7PM5hUfWg&libraries=places,geometry")
+    script(src="javascripts/lib/Chart.js")
+
+    //- util scripts
+    script(src="javascripts/util/sha1.min.js")
+    script(src="javascripts/util/joinUtil.js")
+    script(src="javascripts/util/homepageUtil.js")
+    script(src="javascripts/util/mapUtil.js")
+    script(src="javascripts/util/incidentStepperUtil.js")
+    script(src="javascripts/util/incidentStep1Util.js")
+    script(src="javascripts/util/incidentStep2Util.js")
+    script(src="javascripts/util/incidentStep3Util.js")
+    script(src="javascripts/util/incidentStep3AnswerUtil.js")
+    script(src="javascripts/util/incidentStep4Util.js")
+    script(src="javascripts/util/incidentStep5Util.js")
+    script(src="javascripts/util/incidentStep5ChatUtil.js")
+    script(src="javascripts/util/incidentDisplayUtil.js")
+    script(src="javascripts/util/alertHttpUtil.js")
+    script(src="javascripts/util/patientUtil.js")
+    script(src="javascripts/util/searchUtil.js")
+    script(src="javascripts/util/shareSupplyUtil.js")
+    script(src="javascripts/util/userProfileUtil.js")
+    script(src="javascripts/util/messageUtil.js")
+    script(src="javascripts/util/resourcesUtil.js")
+    script(src="javascripts/util/fireTruckDirectoryUtil.js")
+    script(src="javascripts/util/organizationUtil.js")
+    script(src="javascripts/util/findHospitalUtil.js")
+    script(src="javascripts/util/requestResourceUtil.js")
+
+    //- views scripts
+    script(src="javascripts/navbar.js")
+    script(src="javascripts/homepage.js")
+    script(src="javascripts/status.js")
+    script(src="javascripts/userlist.js")
+    script(src="javascripts/announcement.js")
+    script(src="javascripts/publicChat.js")
+    script(src="javascripts/shareSupply.js")
+    script(src="javascripts/privateChat.js")
+    script(src="javascripts/map.js")
+    script(src="javascripts/userProfile.js")
+    script(src="javascripts/hospital.js")
+    script(src="javascripts/incident.js")
+    script(src="javascripts/incidentDispatcher.js")
+    script(src="javascripts/incidentFirstResponder.js")
+    script(src="javascripts/patientsDirectory.js")
+    script(src="javascripts/group.js")
+    script(src="javascripts/groupChat.js")
+    script(src="javascripts/alertPanel.js")
+    script(src="javascripts/resources.js")
+    script(src="javascripts/resourceReqDirectory.js")
+    script(src="javascripts/hospitalDirectory.js")
+    script(src="javascripts/fireTruckDirectory.js")
+    script(src="javascripts/manageResources.js")
+    script(src="javascripts/organization.js")
+    script(src="javascripts/erbed.js")
+    script(src="javascripts/dashboard.js")
+    script(src="javascripts/situations.js")
+    script(src="javascripts/newSituation.js")
+    script(src="javascripts/orgTracking.js")
+    script(src="javascripts/findHospital.js")
+    script(src="javascripts/requestResource.js")
+    script(src="javascripts/nurse.js")
+    script(src="javascripts/firstAidInstruction.js")
+    script(src="javascripts/instructions.js")
+    script(src="javascripts/util/userList.js")
+
+

@@ -1,0 +1,48 @@
+block content
+    #selectCategory.page-hidden-info Public
+    #selectID.page-hidden-info
+    .container#chat_window(style='display: none;')
+        .row.first-row
+            #contactDir.col-5
+                .card.card-body(style = "margin-top: 7rem;")
+                    .card-header
+                        card-title Groups
+                    ul.list-group.list-group-flush#group-list
+                .card.card-body(style = "margin-top: 1rem; padding-right: 0.5rem")
+                    .card-header
+                        card-title Contacts
+                    ul.list-group.list-group-flush#contact-list
+                .card.card-body(style = "margin-top: 1rem; padding-right: 0.5rem")
+                    .p#currentContact None
+            #historyMsg.col-7
+
+        .row.input-row.fixed-bottom
+            .col-2
+                button#image_button.btn.btn-primary.bmd-btn-fab.bmd-btn-fab-sm
+                    i.material-icons.md-24.md-light image
+            .col-2
+                button#alert_button.btn.btn-primary.bmd-btn-fab.bmd-btn-fab-sm
+                    i.material-icons.md-24.md-light warning
+            .col-6
+                input#chat_content.form-control(placeholder="Input public message")
+            .col-2.btn-send
+                button#send_button.btn.btn-primary.bmd-btn-fab.bmd-btn-fab-sm
+                    i.material-icons.md-24.md-light send
+
+
+    #modalSendImage.modal.fade(tabindex='-1', role='dialog', data-backdrop="static")
+        .modal-dialog(role='document')
+            .modal-content
+                .modal-header
+                    h5.modal-title SendImage
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') &times;
+                .modal-body
+                    .container
+                        img#outputImage(style='width: inherit')
+                    .row.input-row
+                        .col-9
+                            input#imageForm.form-control(type='file' accept='image/*' onchange = 'openFile(event)')
+                        .col-3
+                            button#sendImage.btn.btn-primary.btn-raised
+                                | Send

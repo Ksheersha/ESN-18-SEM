@@ -1,0 +1,66 @@
+block content
+    .container#user_window(style='display: none;')
+        .col-12
+            .panel.panel-default
+                .panel-heading
+                .panel-body.list-body
+                    table.table.table-hover#user-list
+                #list-count.panel-footer
+        navbar.input-row.fixed-bottom
+
+    #modalEditUserProfile.modal.fade(tabindex='-1', role='dialog', data-backdrop="static")
+        .modal-dialog(role='document')
+            .modal-content
+                .modal-header
+                    h5#exampleModalLabel.modal-title Edit user
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') &times;
+                .modal-body
+                    form#editProfileForm(method="post")
+                        .form-group
+                            label.form-control-label(for='profile-username') Username:
+                            input#profile-username.form-control(type='text', name="username")
+                            .invalid-feedback
+                            input#profile-userid.form-control(style='display: none;')
+                        .form-group
+                            label.form-control-label(for='profile-password') Password:
+                            input#profile-password.form-control(name="password")
+                            .invalid-feedback
+                        .form-group
+                            label.form-control-label(for='profile-is-active') Account Status:
+                            select#profile-is-active.custom-select.form-control(name="isActive")
+                                option(selected="selected", value="true") Active
+                                option(value="false") Inactive
+                        .form-group
+                            label.form-control-label(for='profile-role') Role:
+                            select#profile-role.custo-select.form-control(name="role")
+                                option(selected="selected", value='Citizen') Citizen
+                                option(value='Administrator') Administrator
+                                option(value='Dispatcher') Dispatcher
+                                option(value='PoliceChief') Police Chief
+                                option(value='PatrolOfficer')  Patrol Officer
+                                option(value='FireChief') Fire Chief
+                                option(value='Firefighter') Firefighter
+                                option(value='Paramedic') Paramedic
+                                option(value='Nurse') Nurse
+                        .form-group
+                            label.form-control-label(for='profile-is-coordinator') Coordinator:
+                            .spacer
+                            if user.role == 'Administrator' || user.role == 'FireChief' || user.role == 'PoliceChief'
+                                label.radio-inline.with-gap
+                                    input#isCoordinator(type='radio', name='isCoordinator', value='1', disabled='true', checked='true')
+                                    |  Is Coordinator
+                                label.radio-inline.with-gap
+                                    input#notCoordinator(type='radio', name='isCoordinator', value='0', disabled='true', checked='false')
+                                    |  Not Coordinator
+                            else
+                                label.radio-inline.with-gap
+                                    input#isCoordinator(type='radio', name='isCoordinator', value='1')
+                                    |  Is Coordinator
+                                label.radio-inline.with-gap
+                                    input#notCoordinator(type='radio', name='isCoordinator', value='0')
+                                    |  Not Coordinator
+
+                .modal-footer
+                    button.btn.btn-secondary(type='button', data-dismiss='modal') Cancel
+                    button#profile-save.btn.btn-primary(type='button') Save

@@ -1,0 +1,55 @@
+block content
+    #modalDeleteHospitalAlert.modal.fade(tabindex='-1', role='dialog', data-backdrop="static")
+        .modal-dialog(role='document')
+            .modal-content
+                .modal-header
+                    h5#exampleModalLabel.modal-title Alert
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') &times;
+                .modal-body
+                    p Are you sure you want to delete this hospital?
+                .modal-footer
+                    button.btn.btn-secondary(type='button', data-dismiss='modal') No
+                    button#hospital-delete.btn.btn-primary(type='button') Yes
+
+    .container#hospital_window(style='display: none;')
+        form#hospitalForm
+            .card-spacer
+            .card-spacer
+            .card-spacer
+            .card-spacer
+            .card-spacer
+            .card-spacer
+            .card
+                .card-body
+                    h5#hospitalTitle.card-title Register Hospital
+                    div#hospitalId(style='display: none;')
+                    .form-group.row
+                        label.col-sm-2.col-form-label(for='hospitalName') Name
+                        .col-sm-10
+                            input#hospitalName.form-control(autofocus, type='text', name='hospitalName', required='')
+                    .form-group.row
+                        label.col-sm-2.col-form-label(for='hospitalAddress') Address
+                        .col-sm-10
+                            input#hospitalAddress.form-control(type='text', aria-describedby='Hospital Address', placeholder='Enter Hospital Address', required='')
+                    .form-group.row
+                        label.col-sm-2.col-form-label(for='hospitalDescription') Description
+                        .col-sm-10
+                            input#hospitalDescription.form-control(type='text', aria-describedby='Description')
+                    .control-group
+                        p
+                            label.control-label(for='existingNurses') Nurse:
+                            label#existingNurses.form-control-static  None Listed
+                    if user.role === 'Nurse'
+                        .form-group.row
+                            .col-sm-2
+                                .col-sm-10
+                                    .form-check
+                                        input#nurseName.form-check-input(type='checkbox', name='nurseName')
+                                        label.form-check-label(for='nurseName') I work at this Hospital&apos;s ER
+            .card-spacer
+            .card
+                .card-body
+                    button#submitButtonRegisterHosp.btn.btn-primary.float-right(type='submit') Submit
+                    button#cancelButtonRegisterHosp.btn.btn-danger.float-left(type='button') Cancel
+                    button#deleteButtonRegisterHosp.btn.btn-danger.float-center(type='button') Delete

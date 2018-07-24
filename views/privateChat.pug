@@ -1,0 +1,29 @@
+block content
+    #modalPrivateChat.modal.fade(tabindex='-1', role='dialog', data-backdrop="static")
+        .modal-dialog(role='document')
+            .modal-content
+                .modal-header
+                    h5.modal-title Private Chat with ?
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') &times;
+                    #toID.page-hidden-info
+                    #toName.page-hidden-info
+                .modal-body
+                    .container#private_chat_window
+                        #privateHistoryMsg.col-12
+                .modal-footer.justify-content-start
+                    button#privateShowSearchBtn.btn.btn-info.btn-raised.bmd-btn-fab.bmd-btn-fab-sm
+                        i.material-icons.md-24.md-light search
+                    .row.private-input-row
+                        .col-10
+                            input#private_chat_content.form-control(placeholder="Input private message")
+                        .col-1.btn-send
+                            button#private_send_button.btn.btn-primary.bmd-btn-fab.bmd-btn-fab-sm
+                                i.material-icons.md-24.md-light send
+                    .private-search-container.input-group(style="display: none;")
+                        span#searchAddon.input-group-addon
+                            i.material-icons.md-24 search
+                        input#privateSearchInput.form-control(type="search" placeholder="search in this private chat" aria-describedby="searchAddon")
+                        button#privateHideSearchBtn.btn
+                            i.material-icons.md-24.md-grey expand_more
+                        button#privateMoreBtn.btn.btn-primary.btn-raised.btn-sm(style="display: none;") +10

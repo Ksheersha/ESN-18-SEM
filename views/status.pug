@@ -1,0 +1,15 @@
+block content
+    .container#share_status(style='display: none;')
+        .col-12
+            .radio
+                label
+                    input#OK(type='radio', name='status-radio', value='OK')
+                    |       <i class="material-icons md-24 icon-ok">check_circle</i> OK
+            .radio
+                label
+                    input#Help(type='radio', name='status-radio', value='Help')
+                    |       <i class="material-icons md-24 icon-help">warning</i> Help
+            .radio
+                label
+                    input#Emergency(type='radio', name='status-radio', value='Emergency')
+                    |       <i class="material-icons md-24 icon-emergency">add_alert</i> Emergency

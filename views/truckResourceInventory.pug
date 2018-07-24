@@ -1,0 +1,80 @@
+block content
+    .container#truck_inventory_window(style='display:none')
+        form#truckForm
+            .card-spacer
+            .card-spacer
+            .card-spacer
+            .card-spacer
+            .card-spacer
+            .card-spacer
+            .card
+                .card-body
+                    h5#inventoryTitle.card-title Resource List
+                    div#truckId(style='display: none;')
+                    div#inventoryId(style='display: none;')
+                    .inventoryInfo
+                        .row
+                            .col-3
+                                p
+                            .col-5
+                                p(style="text-align: left; margin: 0px") Current Count
+                            .col-4
+                                p(style="text-align: left; margin: 0px")
+                        #handleCounterBandage
+                            .row
+                                .col-4
+                                    p(style="text-align: left; margin: 0px") Bandage:
+                                .col-8
+                                    input#bandageCurrentCount(type='text')
+                                    button#bandageButton.btn.btn-primary.button.raised.teal -
+                        #handleCounterAntibiotics
+                            .row
+                                .col-4
+                                    p(style="text-align: left; margin: 0px") Antibiotics:
+                                .col-8
+                                    input#antibioticsCurrentCount(type ='text')
+                                    button#antibioticsButton.btn.btn-primary.button.raised.teal -
+                        #handleCounterPainKiller
+                            .row
+                                .col-4
+                                    p(style="text-align: left; margin: 0px") Pain Killers:
+                                .col-8
+                                    input#painKillerCurrentCount(type ='text')
+                                    button#painKillerButton.btn.btn-primary.button.raised.teal -
+                        #handleCounterOintment
+                            .row
+                                .col-4
+                                    p(style="text-align: left; margin: 0px") Ointment:
+                                .col-8
+                                    input#ointmentCurrentCount(type ='text')
+                                    button#ointmentButton.btn.btn-primary.button.raised.teal -
+                        #handleCounterAspirin
+                            .row
+                                .col-4
+                                    p(style="text-align: left; margin: 0px") Aspirin:
+                                .col-8
+                                    input#aspirinCurrentCount(type ='text')
+                                    button#aspirinButton.btn.btn-primary.button.raised.teal -
+                        #handleCounterColdCompress
+                            .row
+                                .col-4
+                                    p(style="text-align: left; margin: 0px") Cold Compress:
+                                .col-8
+                                    input#coldCompressCurrentCount(type ='text')
+                                    button#coldCompressButton.btn.btn-primary.button.raised.teal -
+                        #handleCounterSanitizer
+                            .row
+                                .col-4
+                                    p(style="text-align: left; margin: 0px") Sanitizer:
+                                .col-8
+                                    input#sanitizerCurrentCount(type ='text')
+                                    button#sanitizerButton.btn.btn-primary.button.raised.teal -
+
+
+            .card-spacer
+            .card
+                .card-body
+                    button#submitButtonRequestResource.btn.btn-primary.float-right(type='button') Request
+
+
+

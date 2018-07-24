@@ -1,0 +1,64 @@
+extends layout
+
+block content
+  nav.navbar.navbar-dark
+    h4.navbar-brand.text-center(style="width: 100%; padding-top: 2em; padding-bottom: 1.8em; font-size: 2em;") Welcome to #{title}
+
+  .container-fluid.join-container
+    .row.justify-content-center
+      .col-12.align-self-center
+        .form-horizontal(role="form")
+          .form-group
+            label.bmd-label-floating(for="iptUsername") username
+            input#iptUsername.form-control(autofocus)
+          .form-group
+            label.bmd-label-floating(for="iptPassword") password
+            input#iptPassword.form-control(type="password")
+      .col-8(style="margin-top: 2em;")
+        button#btnJoin.btn.btn-raised.btn-primary(style="width:100%;") JOIN
+
+  #modalPromoteCreateUser.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+    .modal-dialog.short-modal(role='document')
+      .modal-content
+        .modal-header
+          h5.modal-title User does not exist
+        .modal-body
+          | Create One?
+        .modal-footer
+          button.btn.btn-secondary(type='button', data-dismiss='modal') Nope
+          button.btn.btn-primary(type='button', id='btnCreateNewUser', data-dismiss='modal') Yes, Create!
+
+  #modalWelcome.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+    .modal-dialog.med-modal(role='document')
+      .modal-content
+        .modal-header
+          h5.modal-title Welcome!
+        .modal-body
+          table.table.table-stripped
+            thead.thead-default
+              tr
+                th Status
+                th Explanation
+                th Color
+            tr
+              td OK
+              td I am OK, I do not need help.
+              td <i class="material-icons md-36 icon-ok">check_circle</i>
+            tr
+              td Help
+              td I need help, but this is not a life threatening emergency.
+              td <i class="material-icons md-36 icon-help">warning</i>
+            tr
+              td Emergency
+              td I need help now, as this is a life threatening emergency!
+              td <i class="material-icons md-36 icon-emergency">add_alert</i>
+        .modal-footer
+          button.btn.btn-raised.btn-primary(type='button' id='btnProceed') Proceed
+
+block js
+  script(src="javascripts/util/joinUtil.js")
+  script(src="javascripts/util/sha1.min.js")
+  script(src="javascripts/join.js")
+
+
+

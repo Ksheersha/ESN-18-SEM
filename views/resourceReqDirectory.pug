@@ -1,0 +1,46 @@
+block content
+    .container#resource_req_directory_window(style='display: none')
+        .row.first-row
+            #resourceReqDirectory.col-12
+
+    #modalRequestInfo.modal.fade(tabindex='-1', role='dialog', data-backdrop="static")
+        .modal-dialog.med-modal(role='document')
+            .modal-content
+                .modal-header
+                    h5.modal-title  Resource Request Information
+                .modal-body.container
+                    .row
+                        .col.align-self-start Name
+                        #resourceReqName.col.align-self-end
+                    .row
+                        .col.align-self-start From Hospital:
+                        #resourceReqHospital.col.align-self-end
+                    .row
+                        .col.align-self-start Status
+                        #resourceReqStatus.col.align-self-end
+                    .row
+                        .col.align-self-start Ordered At:
+                        #resourceReqCreatedTime.col.align-self-end
+                    .row
+                        .col.align-self-start Bandages:
+                        #resourceReqBandages.col.align-self-end
+                    .row
+                        .col.align-self-start Antibiotics:
+                        #resourceReqAntibiotics.col.align-self-end
+                    .row
+                        .col.align-self-start Pain-Killer:
+                        #resourceReqPainKiller.col.align-self-end
+                    .row
+                        .col.align-self-start Ointment:
+                        #resourceReqOintment.col.align-self-end
+                    .row
+                        .col.align-self-start Aspirin:
+                        #resourceReqAspirin.col.align-self-end
+                    .row
+                        .col.align-self-start Cold Compresses:
+                        #resourceReqColdCompresses.col.align-self-end
+                    .row
+                        .col.align-self-start Sanitizers:
+                        #resourceReqSanitizers.col.align-self-end
+                .modal-footer
+                    button#resourceReqOkBtn.btn.btn-primary(type='button', data-dismiss='modal') Ok

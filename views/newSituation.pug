@@ -1,0 +1,41 @@
+block content
+    .container#newSituation_window(style='display: none')
+        .card-spacer
+        .card
+            .card-body
+                h5.card-title#newSituationTitle New Situation
+                form#newSituationForm
+                    .form-group#situationDetail
+                    .form-group#situationNameForm
+                        label(for='situationName') Situation Name
+                        input#situationName.form-control(type='text', aria-describedby='Situation Name', required)
+                    .form-group#situationAddressForm
+                        label(for='situationAddress') Address
+                        input#situationAddress.form-control(type='text', aria-describedby='Situation Address', required)
+                    .form-group#situationRadiusForm
+                        label(for='affectedAreaRadius') Affected Area (radius in miles)
+                        input#affectedAreaRadius.form-control(type='number', min="0", step='0.1',
+                        aria-describedby='Affected Area')
+
+                    #newSituationMap(style='width:100%;height: 400px')
+
+                    .form-group
+                        label(for='newSituationDescription') Description
+                        input#newSituationDescription.form-control(type='text', aria-describedby='Description',
+                        required)
+                    .form-group
+                        label(for='newSituationSpecialNotes') Special Notes
+                        input#newSituationSpecialNotes.form-control(type='text', aria-describedby='Special Notes')
+                    .spacer
+                    button#affectedUserListButton.btn.btn-primary.btn-raised(type='button')
+                        span#affectedUserLabel Affected User List
+                        i.material-icons.md-24.float-right list
+                    .spacer
+                    button#closeSituationButton.btn.btn-danger.btn-raised(type='button')
+                        span#closeSituationLabel Close Situation
+                        i.material-icons.md-24.float-right warning
+                    .spacer
+                    button#submitNewSituationBtn.btn.btn-primary.float-right(type='submit') Submit
+
+        .card-spacer
+

@@ -1,0 +1,37 @@
+block content
+    #alertPanelModal.modal.fade(tabindex='-1', role='dialog', data-backdrop="static")
+        .modal-dialog(role='document')
+            .modal-content
+                .modal-header
+                    h5.modal-title Alert Panel
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') &times;
+                    #alertGroupId.page-hidden-info
+                #alertPanelBody.modal-body
+                    .container#commanderContainer(style="display: none;")
+                        .btn-group-vertical
+                            .btn-group(role='group', aria-label='Basic example')
+                                button.btn.btn-primary.bmd-btn-fab(type='button')#topLeftBtn Left
+                                button.btn.btn-primary.bmd-btn-fab(type='button')#topMiddleBtn Middle
+                                button.btn.btn-primary.bmd-btn-fab(type='button')#topRightBtn Right
+                            .btn-group(role='group', aria-label='Basic example')
+                                button.btn.btn-primary.bmd-btn-fab(type='button')#middleLeftBtn Left
+                                button.btn.btn-primary.bmd-btn-fab(type='button')#middleCenterBtn Middle
+                                button.btn.btn-primary.bmd-btn-fab(type='button')#middleRightBtn Right
+                            .btn-group(role='group', aria-label='Basic example')
+                                button.btn.btn-primary.bmd-btn-fab(type='button')#bottomLeftBtn Left
+                                button.btn.btn-primary.bmd-btn-fab(type='button')#bottomMiddleBtn Middle
+                                button.btn.btn-primary.bmd-btn-fab(type='button')#bottomRightBtn Right
+                    .container#maydayContainer(style="display: none;")
+                        button.btn.btn-primary.bmd-btn-fab(type='button')#maydayBtn Mayday
+    #respondAlertModal.modal.fade(tabindex='-1', role='dialog', data-backdrop="static")
+        .modal-dialog(role='document')
+            .modal-content
+                .modal-header
+                    h5.modal-title Alert Panel
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') &times;
+                .modal-body
+                    #alertMessageId.page-hidden-info
+                    #receiveAlertMessage.notification-message-unread(data-dismiss='modal', aria-label='Close')
+                        | Alert

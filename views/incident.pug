@@ -1,0 +1,184 @@
+block content
+    .container#incident_window(style='display: none')
+        form
+            .mdl-card.mdl-shadow--2dp
+                .mdl-card__supporting-text
+                    .mdl-stepper-horizontal-alternative
+                        .mdl-stepper-step.active-step#step1button
+                            .mdl-stepper-circle
+                                span 1
+                            .mdl-stepper-bar-left
+                            .mdl-stepper-bar-right
+                        .mdl-stepper-step#step2button
+                            .mdl-stepper-circle
+                                span 2
+                            .mdl-stepper-bar-left
+                            .mdl-stepper-bar-right
+                        .mdl-stepper-step#step3button
+                            .mdl-stepper-circle
+                                span 3
+                            .mdl-stepper-bar-left
+                            .mdl-stepper-bar-right
+                        .mdl-stepper-step#step4button
+                            .mdl-stepper-circle
+                                span 4
+                            .mdl-stepper-bar-left
+                            .mdl-stepper-bar-right#step4buttonright
+                        .mdl-stepper-step#step5button
+                            .mdl-stepper-circle
+                                span 5
+                            .mdl-stepper-bar-left
+                            .mdl-stepper-bar-right
+
+            .card-spacer
+            .card-spacer
+
+            .card#step1card
+                .card-body
+                    h5.card-title#step1title
+                    .form-group
+                        input#emergencyAddress.form-control(autofocus, type='text', aria-describedby='Emergency Address', placeholder='Enter Emergency Address')
+                    .card-spacer
+                    #incidentStep1Map(style = "width: 100%; height: 300px;")
+
+            .card#step2card
+                .card-body
+                    h5.card-title Select Emergency Type:
+                    .card-spacer
+                    button#fireTypeButton.btn.btn-primary.btn-raised(type='button')
+                        span#fireLabel Fire Emergency
+                        i.material-icons.md-24.float-right whatshot
+                    .spacer
+                    button#medicalTypeButton.btn.btn-primary.btn-raised(type='button')
+                        span#medicalLabel Medical Emergency
+                        i.material-icons.md-24.float-right local_hospital
+                    .spacer
+                    button#policeTypeButton.btn.btn-primary.btn-raised(type='button')
+                        span#policeLabel Police Emergency
+                        i.material-icons.md-24.float-right local_taxi
+
+            include incidentStep3Form.pug
+            
+
+            .card#step4card
+                .card-body
+                    h5.card-title Chat Page
+                    button#chat911DispatcherButton.btn.btn-primary.btn-raised(type='button')
+                        span#chat911Dispatcher Chat
+
+            .card#step5card
+                .card-body
+                    h5.card-title Response Team Corner
+                    .incidentInfo
+                        .row
+                            .col-6
+                                p(style="text-align: right; margin: 0px") Incident Open:
+
+                            .col-6
+                                span#openingDateTime
+                        .row#closeDateTime
+                            .col-6
+                                p(style="text-align: right; margin: 0px") Incident Close:
+
+                            .col-6
+                                span#closingDateTime
+                        .row
+                            .col-6
+                                p(style="text-align: right; margin: 0px") ID:
+
+                            .col-6
+                                span#displayId
+                        .row
+                            .col-6
+                                p(style="text-align: right; margin: 0px")  Caller:
+
+                            .col-6
+                                span#caller
+                        .row
+                            .col-6
+                                p(style="text-align: right; margin: 0px") Incident Priority:
+                            .col-6
+                                select.form-control#priority(onchange='updateIncidentPriority(this)')
+                                    option
+                                        | E
+                                    option
+                                        | 1
+                                    option
+                                        | 2
+                                    option
+                                        | 3
+                    h5.card-title Who is on the team?
+                    .incidentInfo
+                        .row
+                            .col-6
+                                p(style="text-align: right; margin: 0px") Creator:
+                            .col-6
+                                span#creator
+                        .row
+                            .col-6
+                                p(style="text-align: right; margin: 0px") Commander:
+                            .col-6
+                                input#commander.form-control(type='text', name='commander', onclick='transferCommand(this)')
+                                #groupResponders.list-group
+                    button#allocateResourcesButton.btn.btn-primary.btn-raised(type='button')
+                        span#allocateResources Allocate Resources
+                    .incidentInfo
+                        .row
+                            .col-6
+                                p(style="text-align: right; margin: 0px") First Responders:
+                            .col-6
+                                span#firstResponder
+                                #firstResponders.list-group
+                    button#chatWithRespondersButton.btn.btn-primary.btn-raised(type='button')
+                        span#chatWithResponders Chat with Responders
+                    button#closeIncidentButton.btn.btn-danger.btn-raised(type='button')
+                        span#closeIncident Close Incident
+
+            .card-spacer
+            button#prevIncidentStepButton.btn.btn-primary.float-left(type='button')
+                i.material-icons.md-24.float-left chevron_left
+                span#prevIncidentStepText Prev
+            button#nextIncidentStepButton.btn.btn-primary.float-right(type='button')
+                i.material-icons.md-24.float-right chevron_right
+                span#nextIncidentStepText Next
+
+    #modalIncidentGroupChat.modal.fade(tabindex='-1', role='dialog', data-backdrop="static")
+        .modal-dialog(role='document')
+            .modal-content
+                .modal-header
+                    h5.modal-title Group
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') &times;
+                    #toID.page-hidden-info
+                    #toName.page-hidden-info
+                .modal-body
+                    .container#incidet_chat_window
+                        #incidentHistoryMsg.col-12
+                .modal-footer.justify-content-start
+                    .row.private-input-row
+                        .col-10
+                            input#incident_chat_content.form-control(placeholder="Input private message")
+                        .col-1.btn-send
+                            button#incident_send_button.btn.btn-primary.bmd-btn-fab.bmd-btn-fab-sm
+                                i.material-icons.md-24.md-light send
+
+    #modalIncidentTeamChat.modal.fade(tabindex='-1', role='dialog', data-backdrop="static")
+        .modal-dialog(role='document')
+            .modal-content
+                .modal-header
+                    h5.modal-title Group
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') &times;
+                    #toID.page-hidden-info
+                    #toName.page-hidden-info
+                .modal-body
+                    .container#incident_team_chat_window
+                        #incidentTeamHistoryMsg.col-12
+                .modal-footer.justify-content-start
+                    .row.private-input-row
+                        .col-10
+                            input#incident_team_chat_content.form-control(placeholder="Input private message")
+                        .col-1.btn-send
+                            button#incident_team_send_button.btn.btn-primary.bmd-btn-fab.bmd-btn-fab-sm
+                                i.material-icons.md-24.md-light send
+

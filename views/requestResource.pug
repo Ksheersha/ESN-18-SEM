@@ -1,0 +1,101 @@
+block content
+  .container#request_resource_window(style='display: none')
+    .card-spacer
+    .card
+      .card-body
+        form#requestResourceForm
+          .form-row
+            .col-3
+            .col-3 Current
+            .col-3 Expected
+            .col-3
+          .form-group.form-row
+            .col-3
+              label.form-control-label Bandage
+            .col-3
+              input.form-control-plaintext.input-current(type='text' name='bandage' readonly)
+            .col-3
+              input.form-control.input-expected(type='number' name='bandage' min='0')
+            .col-1
+            .col-2
+              .checkbox
+                label
+                  input.input-checkbox(type='checkbox' name='bandage')
+          .form-group.form-row
+            .col-3
+              label.form-control-label Antibiotics
+            .col-3
+              input.form-control-plaintext.input-current(type='text' name='antibiotics' readonly)
+            .col-3
+              input.form-control.input-expected(type='number' name='antibiotics' min='0')
+            .col-1
+            .col-2
+              .checkbox
+                label
+                  input.input-checkbox(type='checkbox' name='antibiotics')
+          .form-group.form-row
+            .col-3
+              label.form-control-label Pain Killer
+            .col-3
+              input.form-control-plaintext.input-current(type='text' name='pain-killer' readonly)
+            .col-3
+              input.form-control.input-expected(type='number' name='pain-killer' min='0')
+            .col-1
+            .col-2
+              .checkbox
+                label
+                  input.input-checkbox(type='checkbox' name='pain-killer')
+          .form-group.form-row
+            .col-3
+              label.form-control-label Ointment
+            .col-3
+              input.form-control-plaintext.input-current(type='text' name='ointment' readonly)
+            .col-3
+              input.form-control.input-expected(type='number' name='ointment' min='0')
+            .col-1
+            .col-2
+              .checkbox
+                label
+                  input.input-checkbox(type='checkbox' name='ointment')
+          .form-group.form-row
+            .col-3
+              label.form-control-label Aspirin
+            .col-3
+              input.form-control-plaintext.input-current(type='text' name='aspirin' readonly)
+            .col-3
+              input.form-control.input-expected(type='number' name='aspirin' min='0')
+            .col-1
+            .col-2
+              .checkbox
+                label
+                  input.input-checkbox(type='checkbox' name='aspirin')
+          .form-group.form-row
+            .col-3
+              label.form-control-label Cold Compress
+            .col-3
+              input.form-control-plaintext.input-current(type='text' name='cold-compress' readonly)
+            .col-3
+              input.form-control.input-expected(type='number' name='cold-compress' min='0')
+            .col-1
+            .col-2
+              .checkbox
+                label
+                  input.input-checkbox(type='checkbox' name='cold-compress')
+          .form-group.form-row
+            .col-3
+              label.form-control-label Sanitizer
+            .col-3
+              input.form-control-plaintext.input-current(type='text' name='sanitizer' readonly)
+            .col-3
+              input.form-control.input-expected(type='number' name='sanitizer' min='0')
+            .col-1
+            .col-2
+              .checkbox
+                label
+                  input.input-checkbox(type='checkbox' name='sanitizer')
+          .card-spacer
+          .form-group
+            label.form-control-label Hospital:
+            select#request-resource-hospital-select.form-control
+          .card-spacer
+          button.btn.btn-primary.btn-raised Place Order

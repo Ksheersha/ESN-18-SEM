@@ -1,0 +1,64 @@
+block content
+    .container#profile_window(style='display: none')
+        form
+            .card-spacer
+            .card
+                .card-body
+                    h5.card-title Personal Information
+                    .form-group
+                        label(for='name') Name
+                        input#name.form-control(type='text', aria-describedby='First and Last Name')
+                    .form-group
+                        label(for='dob') Date of Birth
+                        input#dob.form-control(type='date', aria-describedby='Date of Birth')
+                    .form-group
+                        label.form-control-label(for='sexPI') Sex
+                        .spacer
+                            label.radio-inline.with-gap
+                                input#malePI(type='radio', name='sexPI', value='1')
+                                |  Male
+                            label.radio-inline.with-gap
+                                input#femalePI(type='radio', name='sexPI', value='2')
+                                |  Female
+                            label.radio-inline.with-gap
+                                input#otherPI(type='radio', name='sexPI', value='3')
+                                |  Other
+                    .form-group
+                        label(for='address') Address
+                        input#address.form-control(type='text', aria-describedby='Address')
+                        small#addressHelp.form-text.text-muted B23, NASA Research Park, Moffet Field, CA 94035
+                    .form-group
+                        label(for='phone') Phone
+                        input#phone.form-control(type='text', aria-describedby='Phone Number')
+                        small#phoneHelp.form-text.text-muted (123) 456-7890
+                    .form-group
+                        label(for='email') Email
+                        input#email.form-control(type='text', aria-describedby='Email')
+            .card-spacer
+            .card
+                .card-body
+                    h5.card-title Medical Information
+
+                    .form-group
+                        label(for='condition') Condition
+                        textarea#condition.form-control(aria-describedby='Condition')
+                    .form-group
+                        label(for='drugs') Drugs
+                        textarea#drugs.form-control(aria-describedby='Drugs')
+                    .form-group
+                        label(for='allergies') Allergies
+                        textarea#allergies.form-control(aria-describedby='Allergies')
+            .card-spacer
+            .card
+                .card-body
+                    h5.card-title Emergency Contacts
+                        span.btn-group-sm
+                            button#addContactButton.btn.btn-primary.bmd-btn-fab.float-right(type='button')
+                                i.material-icons.md-24.md-light.center(style="vertical-align: middle") add
+                    div(style="width:90px; height:1em")
+                    #cardsContainer
+            .card-spacer
+            .card
+                .card-body
+                    button#cancelButtonProfile.btn.btn-danger.float-left(type='button') Cancel
+                    button#submitButtonProfile.btn.btn-primary.float-right(type='button') Submit

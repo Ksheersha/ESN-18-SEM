@@ -1,0 +1,43 @@
+block content
+
+#organization_window.container(style='display: none')
+  #organization_directory.container(style='display: None')
+    .panel
+      .card
+        .card-body
+          h3.card-title Organizations
+          #organizations.list-organization
+            li.list-group-item(style='background-color: rgb(255, 255, 255);')
+            
+  #organization_manage.container(style='display: None')
+    .panel
+      form
+        .card
+          .card-body
+            h4#organization_name.card-title
+            .form-group
+              label(for='personnel_list') Personnels:
+                #personnel_list.list-personnel
+            .form-group
+              label(for='vehicles') Vehicles:
+              input#vehicles.form-control(type='number' min=0)
+          .card-body
+            button#cancelOrganizationInfo.btn.btn-primary.float-left(type='button') Cancel
+            button#submitOrganizationInfo.btn.btn-primary.float-left(type='button') Submit
+
+  #organization_view.container(style='display: None')
+    .panel
+      .card
+        .card-body   
+          h3.card-title Organizations                 
+          ul.list-group.list-group-flush#organizationViewUL      
+
+
+
+  #organizationPageAlert.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+      .modal-dialog.short-modal(role='document')
+        .modal-content
+          .modal-header
+            h5#organizatoinAlertText.modal-title
+          .modal-footer
+            button.btn.btn-primary(type='button', id='organizatoinPageAlertOKButton', data-dismiss='modal') OK

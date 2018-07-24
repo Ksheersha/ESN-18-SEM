@@ -1,0 +1,25 @@
+block content
+    .container#map_window(style='display: none;')
+        #phone_input.row.input-row
+            .col-10
+                input#phone_content.form-control(placeholder="Phone Number")
+            .col-2.btn-send
+                button#phone_button.btn.btn-primary.bmd-btn-fab.bmd-btn-fab-sm
+                    i.material-icons.md-24.md-light add
+        .row
+            #mapLayers.col-5
+                .card.card-body
+                    .card-header
+                        card-title Groups
+                    ul.list-group.list-group-flush(style="padding-left: 0rem")#mapGroupList
+                .card.card-body
+                    .card-header
+                        card-title Contacts
+                    ul.list-group.list-group-flush(style="padding-left: 0rem")#mapContactList
+                .card.card-body
+                    .card-header
+                        card-title Utils
+                    ul.list-group.list-group-flush(style="padding-left: 0rem")#mapUtilList
+            #mapTrigger.div
+                    i.material-icons.md-24.md-light#map_trigger_button(style="color:black") indeterminate_check_box
+            #googleMap(style='width:100%;height: 500px')

@@ -1,0 +1,817 @@
+html, body {
+    height: 100%;
+    overflow-y: initial !important
+}
+
+.page-hidden-info {
+    display: none;
+}
+
+a {
+    color: #00B7FF;
+}
+.join-container {
+    padding: 2em 15%;
+}
+#modalWelcome tbody tr {
+    font-size: 0.8rem;
+}
+.nav {
+    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.3);
+}
+
+.modal-dialog.short-modal {
+    top: 30%;
+}
+
+.modal-dialog.med-modal {
+    top: 3%;
+}
+
+.modal-title {
+    font-weight: bold;
+}
+
+nav, .home-nav {
+    background-color: #009688;
+    color: white;
+}
+
+nav.nav.nav-tabs.home-nav.fixed-top.fixed-tabs-bar {
+    top: 2.5em
+}
+
+.nav-user-tag {
+    width: 100%;
+    text-align: center;
+}
+
+.nav-user-tag .back-btn {
+    float: left;
+    margin-left: .5rem;
+    margin-bottom: 0;
+}
+
+.nav-user-tag .icon {
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+    vertical-align: middle;
+}
+
+.nav-user-tag #userTagName {
+    font-size: 1rem;
+}
+
+.nav-user-tag .user-icon,
+.nav-user-tag .navbar-brand {
+    padding: .46875rem .2rem;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.nav-user-tag .btn {
+    padding: .3rem .5rem;
+}
+
+.nav-user-tag .user-tag {
+    display: inline;
+}
+
+.nav-user-tag .dropdown {
+    display: inline;
+    float: right;
+    margin-right: .5rem;
+}
+
+.nav-user-tag .dropdown-toggle::after {
+    display:none;
+}
+
+.nav-user-tag .dropdown-toggle {
+    margin-bottom: 0;
+}
+
+.nav-item {
+    padding: 0.5em 0.5em;
+    display: table-cell;
+    text-align: center;
+}
+
+.nav {
+    padding-left: 0.2rem;
+}
+
+.nav-tabs {
+    display: table;
+    width: 100%;
+}
+
+.nav-tabs .nav-link {
+    padding: .3rem .6rem;
+}
+
+.nav-tabs .nav-link.active:focus,
+.nav-tabs .nav-link.active:hover,
+.nav-tabs .nav-link.active {
+    background-color: rgba(30, 180, 156, .87);
+    border-bottom: none;
+    border-top: .06rem solid #fff;
+}
+
+.nav-search-container {
+    background-color: rgba(30, 180, 156, 1);
+    position: fixed;
+    z-index: 1040;
+    padding: 1.2rem 0.5rem;
+    width: 100%;
+    height: 5.5rem;
+}
+
+.nav-search-container .row .col {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.nav-search-container .row .col-10 {
+    padding-left: 1.3rem;
+    padding-top: 0.3rem;
+}
+
+.nav-search-container .form-control {
+    background-image:
+            linear-gradient(0deg,#FFFFFF 1px,#1EB49C 0),
+            linear-gradient(0deg,#1EB49C 1px,transparent 0);
+}
+
+.nav-search-container input:focus,
+.nav-search-container input:active {
+    color: #fff;
+}
+
+.nav-search-container #navMoreBtn {
+    position: absolute;
+    top: 4rem;
+    right: 0.5rem;
+}
+
+/* for navsearch placeholder color */
+.nav-search-container input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #00695C;
+}
+.nav-search-container input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #00695C;
+    opacity:  1;
+}
+.nav-search-container input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #00695C;
+    opacity:  1;
+}
+.nav-search-container input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #00695C;
+}
+.panel {
+    padding-top: 6rem;
+}
+#navShowSearchBtn {
+    background-color: rgba(255, 179, 0, 0.88);
+    position: fixed;
+    bottom: 3.4rem;
+    right: 0.9rem;
+    z-index: 1020;
+}
+
+#historyMsg{
+    background-color: #f1f1f1;
+    padding: 5.5rem 0 4.5rem 0;
+    overflow-y: auto;
+}
+#chat_window .first-row,
+#supply_window .first-row,
+#user_window .panel,
+#modalIncidentTeamChat .modal-dialog,
+#modalIncidentGroupChat .modal-dialog,
+#modalAffectedUserList .modal-dialog,
+#modalGroupChat .modal-dialog,
+#modalPrivateChat .modal-dialog{
+    overflow-y: initial !important
+}
+#user_window .panel,
+#map_window, #resource_window,
+#profile_window,
+#patient_window,
+#patients_directory_window,
+#hospital_directory_window,
+#resource_req_directory_window,
+#find_hospital_window,
+#situations_window,
+#newSituation_window,
+#request_resource_window,
+#mainPage .panel {
+    padding-top: 5.5rem;
+}
+
+#mainPage .panel {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#mainPage .btn {
+    padding: .9rem .5rem;
+    margin: 1rem 0;
+    background-color: #009688;
+}
+
+#mainPage .main-btn-icon {
+    margin-right: 1rem;
+    float: right;
+}
+
+#mainPage .btn-danger {
+    background-color: firebrick;
+}
+
+#incident_window,
+#incident_dispatcher_window,
+#incident_firstResponder_window,
+#incident_question_answer_window {
+    padding-top: 5.5rem;
+}
+
+#dashboard_window {
+    padding-top: 5.5rem;
+}
+
+#group_chat_window,
+#private_chat_window {
+    max-height: 50rem;
+}
+#group_chat_window,
+#private_chat_window,
+#modalGroupChat .modal-body,
+#modalIncidentTeamChat .modal-body,
+#modalAffectedUserList .modal-body,
+#modalIncidentGroupChat .modal-body,
+#modalPrivateChat .modal-body {
+    margin: 0;
+    padding: 0;
+}
+#user_window .col-12 {
+    padding-bottom: 5rem;
+}
+#user_window table td {
+    padding-left: 1rem;
+}
+#user_window .panel-body,
+#modalGroupChat .modal-body,
+#modalAffectedUserList .modal-body,
+#modalIncidentTeamChat .modal-body,
+#modalIncidentGroupChat .modal-body,
+#modalPrivateChat .modal-body,
+#modalRelevantSituations .modal-body {
+    overflow-y: auto;
+    overflow-x: hidden;
+    /*padding-left: 0.5rem;*/
+}
+#modalGroupChat .modal-body,
+#modalIncidentTeamChat .modal-body,
+#modalAffectedUserList .modal-body,
+#modalIncidentGroupChat .modal-body,
+#modalPrivateChat .modal-body,
+#modalRelevantSituations .modal-body {
+    overflow-y: initial !important
+}
+#modalGroupChat .modal-header,
+#modalIncidentTeamChat .modal-header,
+#modalIncidentGroupChat .modal-header,
+#modalAffectedUserList .modal-header,
+#modalPrivateChat .modal-header {
+    padding-bottom: 0.5rem;
+}
+#modalGroupChat .modal-content span,
+#modalIncidentTeamChat .modal-content span,
+#modalIncidentGroupChat .modal-content span,
+#modalAffectedUserList .modal-content span,
+#modalPrivateChat .modal-content span {
+    padding-top: 0.1rem;
+}
+.private-search-container {
+    position: fixed;
+    left: 0;
+    bottom: .1rem;
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    background-color: white;
+}
+.private-search-container .form-control {
+    margin-right: .5rem;
+}
+.private-search-container .input-group-addon {
+    padding: 0.5rem 0 0.2rem 1.1rem;
+}
+#privateMoreBtn {
+    margin: 0;
+    position: fixed;
+    bottom: 3.4rem;
+    right: 2rem;
+}
+#privateHideSearchBtn {
+    margin-right: 1rem;
+}
+#modalGroupChat .modal-footer,
+#modalIncidentTeamChat .modal-footer,
+#modalIncidentGroupChat .modal-footer,
+#modalAffectedUserList .modal-footer,
+#modalPrivateChat .modal-footer {
+    padding-bottom: 0.3rem;
+    padding-top: 1.1rem;
+}
+#groupHistoryMsg,
+#privateHistoryMsg {
+    margin: auto;
+    padding-bottom: 0.4rem;
+    overflow-y: auto;
+}
+
+#historyMsg .sender-info,
+#groupHistoryMsg .sender-info,
+#privateHistoryMsg .sender-info {
+    color: #555;
+    font-size: .7rem;
+}
+
+#historyMsg .chat-content,
+#groupHistoryMsg .chat-content,
+#privateHistoryMsg .chat-content {
+    white-space: normal;
+    word-wrap: break-word;
+    margin-top: .1rem;
+    padding: .5rem;
+}
+#privateShowSearchBtn {
+    background-color: rgba(255, 179, 0, 0.88);
+    position: fixed;
+    bottom: 3.7rem;
+    right: 1.6rem;
+}
+#groupHistoryMsg .chat-box,
+#privateHistoryMsg .chat-box,
+#historyMsg .chat-box {
+    margin-top: .8rem;
+}
+
+#historyMsg .chat-box-me .sender-info,
+#groupHistoryMsg .chat-box-me .sender-info,
+#privateHistoryMsg .chat-box-me .sender-info
+{
+    text-align: right;
+}
+
+.chat-box-me .chat-content {
+    word-wrap: break-word;
+    background-color: #289688;
+}
+
+.map-content {
+    white-space: normal;
+    word-break: break-all;
+    padding: .5rem;
+}
+
+.gm-style .gm-style-iw {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#announcementMsg {
+    background-color: #f1f1f1;
+    padding: 5.5rem 1rem 4.5rem 1rem;
+    overflow-y: auto;
+}
+#announcementMsg .sender-info {
+    color: #555;
+    font-size: .7rem;
+}
+#announcementMsg .announce-content {
+    word-wrap: break-word;
+    white-space: normal;
+    padding: .5rem;
+}
+#announcementMsg .announce-box {
+    margin-top: .7rem
+}
+
+.announce-box-me {
+
+}
+.announce-box-me .announce-content {
+    background-color: #289688;
+}
+
+.input-row {
+    background-color: #fff;
+    padding: .4rem .5rem 0;
+}
+.group-input-row.row,
+.private-input-row.row {
+    width: 100%;
+    padding-bottom: 0.6rem;
+}
+.input-row .btn-send,
+.group-input-row .btn-send,
+.private-input-row .btn-send {
+    padding: 0;
+}
+.group-input-row .col-10,
+.private-input-row .col-10 {
+    padding-left: 0;
+}
+/* Rules for sizing the icon. */
+
+.material-icons.md-18 {
+    font-size: 18px;
+}
+
+.material-icons.md-24 {
+    font-size: 24px;
+}
+
+.material-icons.md-36 {
+    font-size: 36px;
+}
+
+.material-icons.md-48 {
+    font-size: 48px;
+}
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark {
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.material-icons.md-dark.md-inactive {
+    color: rgba(0, 0, 0, 0.26);
+}
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light {
+    color: rgba(255, 255, 255, 1);
+}
+
+.material-icons.md-light.md-inactive {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.material-icons.status {
+    position: relative;
+    top: .1rem;
+    font-size: .8rem;
+    color: rgba(20, 20, 20, 0.5);
+}
+
+.material-icons.icon-ok,
+.material-icons.icon-view-more {
+    color: rgba(40, 150, 136, 0.75);
+}
+
+.material-icons.icon-help {
+    color: rgba(250, 220, 10, 1);
+}
+
+.material-icons.icon-emergency {
+    color: rgba(255, 69, 0, 0.8);
+}
+
+.material-icons.md-grey {
+    color: rgba(0, 0, 0, 0.5);
+}
+.material-icons.md-purple {
+    color: rgba(63, 81, 181, 1);
+}
+.tab-badge {
+    font-size: .8rem;
+    color: rgba(255, 10, 20, 1);
+    position: absolute;
+    right: 0.2rem;
+    top: 0.8rem;
+    display: none;
+}
+.list-badge {
+    font-size: 1.3rem;
+    color: #009688;
+    position: absolute;
+    right: -1rem;
+}
+.username.online {
+    color: #009688;
+}
+
+.username.offline {
+    color: #c0c0c0;
+}
+
+.container#share_status {
+    padding-top: 5.5rem;
+}
+
+.container#share_status label {
+    margin: 0.5rem;
+    color: #0f0f0f;
+}
+
+.container#share_status label input:checked {
+    font-weight: bold;
+}
+
+#phoneCall,
+/*.btn-delete-util {*/
+    /*margin: 0 auto;*/
+    /*display: block;*/
+    /*width: 10rem;*/
+    /*position: relative;*/
+    /*left: 0.7rem;*/
+    /*margin-top: 1rem;*/
+/*}*/
+
+/*.btn-delete-util {*/
+    /*margin-top: 0.5rem;*/
+    /*background-color: #f44336 !important;*/
+/*}*/
+
+#user-list td {
+    width: 100%;
+}
+
+.checkbox-container {
+    font-size: 5px;
+    padding-left: 0.5rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 -1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.checkbox-container .checkbox label {
+    padding-left: 0.7rem;
+}
+.checkbox-container .checkbox label {
+    color: rgba(0, 0, 0, .26);
+}
+.checkbox-container .is-filled .checkbox label {
+    color: rgba(0, 0, 0, .6);
+}
+.checkbox-container .bmd-form-group {
+    padding-top: 0.5rem;
+}
+
+#addSupplyBtn {
+    background-color: rgba(0,188,212, 0.88);
+    position: fixed;
+    bottom: 2.3rem;
+    right: 0.9rem;
+    z-index: 1020;
+}
+#supplyList {
+    background-color: #f1f1f1;
+    padding: 5.5rem 1rem 3rem 1rem;
+    overflow-y: auto;
+}
+.supply-card {
+    margin-top: 0.8rem;
+    padding: 0.7rem 1rem 0.9rem;
+}
+.supplyName {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.supplyTime {
+    font-size: 0.6rem;
+    padding-top: 0.5rem;
+    text-align: right;
+}
+.supplyLocation {
+    font-style: italic;
+    font-size: 0.9rem;
+}
+.supplyQuantity {
+    text-align: right;
+}
+button#edit {
+    padding: 0;
+}
+.with-gap {
+    margin-right: 1em;
+}
+.card-spacer {
+    width: 100%;
+    height: 1em;
+}
+.spacer {
+    margin-top: 1em;
+}
+
+#addIncidentButton {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+#addHospitalButton {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding-bottom: 3px;
+    padding-left: 2px;
+}
+
+#mapLayers {
+    position: absolute;
+    top: 9.3rem;
+    z-index: 5;
+    padding-right: 0;
+}
+#mapLayers .card-header {
+    padding: 0 !important
+}
+#mapContactList, #mapUtilList,
+#mapGroupList,#group-list, #contact-list {
+    max-height: 6.5rem;
+    overflow: scroll;
+}
+
+/*
+  Public Chat CSS
+*/
+#contactDir{
+    padding-right:0;
+}
+
+#contactDir .card-header{
+    padding: 0;
+}
+
+#contactDir .list-group.list-group-flush,
+#historyMsg,
+#modalSendImage .row .input-row,
+#modalSendImage .row .input-row .col-2
+{
+    padding-left: 0;
+}
+
+#group-list, #contact-list {
+    max-height: 6rem;
+    overflow: scroll;
+}
+
+
+
+#mapLayers .card-body {
+    margin-bottom: 0.5rem !important
+}
+
+#mapTrigger {
+  position: absolute;
+  right: 1.5rem;
+  top: 11rem;
+  z-index: 5;
+  margin-top: 0.5rem !important
+}
+
+/*
+    ALert panel CSS
+ */
+#topLeftBtn,#topMiddleBtn,#topRightBtn
+,#middleLeftBtn,#middleCenterBtn,#middleRightBtn,
+#bottomLeftBtn,#bottomMiddleBtn,#bottomRightBtn,
+#maydayBtn{
+    width:6rem;
+    height:6rem;
+    margin:0.1rem;
+    white-space:normal;
+    font-size:1.2rem;
+}
+#topLeftBtn{
+    background-color: #D32F2F;
+}
+#topMiddleBtn{
+    background-color: #E91E63;
+}
+#topRightBtn{
+    background-color: #03A9F4;
+}
+#middleLeftBtn{
+    background-color: #673AB7;
+}
+#middleCenterBtn{
+    background-color: #009688;
+}
+#middleRightBtn{
+    background-color: #FFEB3B;
+}
+#bottomLeftBtn{
+    background-color: #3F51B5;
+}
+#bottomMiddleBtn{
+    background-color: #00BCD4;
+}
+#bottomRightBtn{
+    background-color: #FF9800;
+}
+#alertPanelBody{
+    padding-left: 0.2rem;
+}
+#maydayContainer{
+    padding-left: 7.5rem;
+}
+#maydayBtn{
+    background-color: #D32F2F;
+}
+
+.notification-message-unread {
+    font-size: 3rem;
+    color: #FFEB3B;
+    display: block;
+    position: relative;
+    text-align: center;
+    width: 19rem;
+    height: 19rem;
+    padding-top: 6rem;
+    background-color: #D32F2F;
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        background-color: #FFEBEE;
+    }
+}
+
+#erbedNumber {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.add-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1020;
+}
+.add-btn .material-icons {
+    margin-top: 5px;
+}
+
+.button.teal {
+    background-color: #009688;
+    color: white;
+
+}
+
+.button.raised {
+    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0.2s;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+.button.raised:active {
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+    transition-delay: 0s;
+}
+
+#trackOrganizationButton,
+#editOrganizationButton {
+    color: #FFC107;
+    background-color: #009688;
+    border-color: #009688;    
+}
+
+#editOrganizationButton:focus,
+#editOrganizationButton:hover,
+#trackOrganizationButton:focus,
+#trackOrganizationButton:hover {
+    background-color:  rgba(255, 193, 7, 0.12);
+    border-color: rgba(255, 193, 7, 0.12);
+}
+
+
+#affectedUserListButton {
+    text-align: center;
+    width: 100%;
+}
+
+#closeSituationButton {
+    text-align: center;
+    width: 100%;
+}
+
+.patient-highlighted {
+    background-color: rgba(255, 179, 0, 0.88);
+}
+
+#find_hospital_window .card-body {
+    padding: 0.75rem;
+}
+
+#modalRelevantSituations .modal-body {
+    overflow-y: scroll;
+    max-height: 500px;
+}

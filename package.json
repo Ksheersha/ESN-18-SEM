@@ -1,0 +1,60 @@
+{
+  "name": "esn-package",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Emergency Social Network Project of SEM-S18",
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "DB_PATH=mongodb://127.0.0.1:27017/esn NODE_ENV=dev nodemon ./bin/www",
+    "test": "DB_PATH=mongodb://127.0.0.1:27017/esn_test grunt test",
+    "coverage": "DB_PATH=mongodb://127.0.0.1:27017/esn_test grunt coverage"
+  },
+  "engines": {
+    "node": ">=8.7 <9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmusv-fse/ESN-S18-SEM.git"
+  },
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "chart.js": "^2.7.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "expect.js": "^0.3.1",
+    "express": "~4.15.5",
+    "express-session": "^1.15.6",
+    "grunt-cli": "^1.2.0",
+    "grunt-mocha-istanbul": "^5.0.2",
+    "http-status": "^1.0.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^4.0.1",
+    "moment": "^2.22.1",
+    "mongoose": "^4.13.12",
+    "morgan": "~1.9.0",
+    "package-name": "^0.1.0",
+    "pug": "2.0.0-beta11",
+    "serve-favicon": "~2.4.5",
+    "socket.io": "^2.1.0",
+    "superagent": "^3.6.3",
+    "update": "^0.7.4",
+    "upgrade": "^1.1.0"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.0",
+    "chai": "^4.1.2",
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-mocha-test": "^0.13.3",
+    "mocha": "*",
+    "mocha-junit-reporter": "^1.15.0",
+    "mockgoose": "^7.3.3",
+    "nodemon": "^1.17.3"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "public/*",
+      "docs/*"
+    ]
+  }
+}

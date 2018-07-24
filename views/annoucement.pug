@@ -1,0 +1,12 @@
+block content
+    .container#announce_window(style="display: none;")
+        .row
+            #announcementMsg.col-12
+
+        if user.isCoordinator
+        #annoucement_input.row.input-row.fixed-bottom
+            .col-10
+                input#announce_content.form-control(placeholder="Input announcement")
+            .col-2.btn-send
+                button#announce_button.btn.btn-primary.bmd-btn-fab.bmd-btn-fab-sm
+                    i.material-icons.md-24.md-light send

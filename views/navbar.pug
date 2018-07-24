@@ -1,0 +1,64 @@
+block content
+    .container
+        nav.nav.home-nav.fixed-top
+            .nav-user-tag
+                a#backToPrevious.back-btn.btn
+                    i.material-icons.md-24.md-light.icon keyboard_arrow_left
+                i#userTagIcon.material-icons.md-24.md-light.user-icon
+                span#pageTitle.navbar-brand.text-light
+                span#userTagName.navbar-brand.text-light
+                .dropdown
+                    a#moreMenuToggle.dropdown-toggle.btn(href="#", role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                        i.material-icons.md-24.md-light.icon more_vert
+                    #moreMenu.dropdown-menu(aria-labelledby="moreMenuToggle")
+
+            .nav-tabs
+                a#pubChatTab.nav-item.nav-link
+                    i.material-icons.md-24.md-light forum
+
+                a#userListTab.nav-item.nav-link
+                    .badge-container
+                        i.tab-badge.material-icons fiber_manual_record
+                        i.material-icons.md-24.md-light perm_contact_calendar
+
+                a#announcementTab.nav-item.nav-link
+                    i.material-icons.md-24.md-light announcement
+
+                a#groupTab.nav-item.nav-link
+                    i.material-icons.md-24.md-light people
+
+                a#mapTab.nav-item.nav-link.nav-link
+                    i.material-icons.md-24.md-light place
+
+                // Needs to be checked after privilege roles are completed & remove coordinator
+                if user.role === 'Citizen' || user.role === 'Administrator' || user.role === 'Coordinator'
+                    a#statusTab.nav-item.nav-link.nav-link
+                        i.material-icons.md-24.md-light face
+                else if user.role === 'Nurse'
+                    a#bedsAvailableTab.nav-item.nav-link
+                        i.material-icons.md-24.md-light local_hotel
+                else
+                    a#incidentTab.nav-item.nav-link.nav-link
+                        .badge-container
+                            i.tab-badge.material-icons fiber_manual_record
+                            i.material-icons.md-24.md-light error
+
+                a#logOutTab.nav-item.nav-link
+                    i.material-icons.md-24.md-light power_settings_new
+
+                a#unreadAnnouncementTab.nav-item.nav-link(style="display: none;")
+                    i.material-icons.md-24.md-light warning
+
+
+    .nav-search-container(style="display: none;")
+        .row
+            .col.col-10
+                input#navSearchInput.form-control(placeholder="Search this page")
+            .col.col-2
+                button#navHideSearchBtn.btn
+                    i.material-icons.md-24.md-light expand_less
+
+        button#navMoreBtn.btn.btn-primary.btn-raised.btn-sm(style="display: none;") +10
+
+    button#navShowSearchBtn.btn.btn-info.btn-raised.bmd-btn-fab.bmd-btn-fab-sm(style="display: none;")
+        i.material-icons.md-24.md-light search

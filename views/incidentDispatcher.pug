@@ -1,0 +1,29 @@
+block content
+.container#incident_dispatcher_window(style='display: none')
+  .card-spacer
+  .card#waitingIncidentsCard
+    .card-body
+      h5.card-title Waiting
+      table.table.table-striped
+        tbody#waitingIncidentsTableBody
+
+  .card-spacer
+  .card#triageOpenIncidentsCard
+    .card-body
+      h5.card-title Triage
+      table.table.table-striped
+        tbody#triageIncidentsTableBody
+
+  .card-spacer
+  .card#assignedIncidentsCard
+    .card-body
+      h5.card-title Assigned Incidents
+      table.table.table-striped
+        tbody#assignedIncidentsTableBody
+
+  .card-spacer
+  .card#closedIncidentsCard
+    .card-body
+      h5.card-title Closed Incidents
+      table.table.table-striped
+        tbody#closedIncidentsTableBody

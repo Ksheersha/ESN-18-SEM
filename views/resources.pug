@@ -1,0 +1,33 @@
+block content
+    .container#resource_window(style='display: none')
+        .row
+            .col-12
+                .card-spacer
+                h5.card-title Allocate Resources
+        .card-spacer
+
+        .row
+            .col-6#vehicleColumn
+                .card-spacer
+                .card.card-body
+                    .card-header
+                        h5 Vehicles
+
+                    ul.list-group.list-group-flush.sortable#vehicleList
+
+            .col-6#areaColumn
+                .card-spacer
+                h5 Areas
+                .card-spacer
+                #areaList
+                h5 Incidents
+                .card-spacer
+                #incidentList
+
+        .card-spacer
+        .row
+            .col-12
+                .card-spacer
+
+                button#cancelResourcesBtn.btn.btn-danger.float-left(type='button') Cancel
+                button#submitResourcesBtn.btn.btn-primary.float-right(type='button') Submit

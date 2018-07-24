@@ -1,0 +1,103 @@
+block content
+    .container#supply_window(style='display: none')
+        .row.first-row
+            #supplyList.col-12
+
+        .row.checkbox-container
+            .checkbox.col-2
+                label
+                    input#checkAll(type='checkbox' onclick="getSupplyHTTP(reloadSupplyList);" checked)
+                    | All
+            .checkbox.col-2
+                label(data-toggle="tooltip" data-placement="top" title="Available")
+                    input#checkAvailable.checkbox-sub(type='checkbox' onclick="getSupplyHTTP(reloadSupplyList);" checked
+                    data-toggle="tooltip" data-placement="top" title="Available")
+                    | <i class="material-icons icon-ok">add_shopping_cart</i>
+            .checkbox.col-2
+                label(data-toggle="tooltip" data-placement="top" title="Requested")
+                    input#checkRequested.checkbox-sub(type='checkbox' onclick="getSupplyHTTP(reloadSupplyList);" checked
+                    data-toggle="tooltip" data-placement="top" title="Requested")
+                    | <i class="material-icons icon-help">star</i>
+            .checkbox.col-2
+                label(data-toggle="tooltip" data-placement="top" title="Your own supplies")
+                    input#checkMySupply.checkbox-sub(type='checkbox' onclick="getSupplyHTTP(reloadSupplyList);" checked
+                    data-toggle="tooltip" data-placement="top" title="Your own supplies")
+                    | <i class="material-icons md-purple">tag_faces</i>
+            .checkbox.col-2
+                label(data-toggle="tooltip" data-placement="top" title="Unavailable")
+                    input#checkUnavailable.checkbox-sub(type='checkbox' onclick="getSupplyHTTP(reloadSupplyList);" checked
+                    data-toggle="tooltip" data-placement="top" title="Unavailable")
+                    | <i class="material-icons icon-emergency">block</i>
+            button#addSupplyBtn.btn.btn-info.btn-raised.bmd-btn-fab.bmd-btn-fab-sm(style="display: none;")
+                i.material-icons.md-24.md-light add
+
+    #modalAddSupply.modal.fade(tabindex='-1', role='dialog', data-backdrop="static")
+        .modal-dialog.med-modal(role='document')
+            .modal-content
+                .modal-header
+                    h5.modal-title Add Supply
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') &times;
+                .modal-body
+                    .form-group
+                        label.bmd-label-floating(for="inputSupplyName") Supply Name*
+                        input#inputSupplyName.form-control(required)
+                    .form-group
+                        label.bmd-label-floating(for="inputSupplyQuantity") Quantity*
+                        input#inputSupplyQuantity.form-control(required)
+                    .form-group
+                        label.bmd-label-floating(for="inputSupplyLocation") Location*
+                        input#inputSupplyLocation.form-control(required)
+                    .form-group
+                        label.bmd-label-floating(for="inputSupplyDescription") Description/Type/Keyword
+                        input#inputSupplyDescription.form-control
+
+                .modal-footer
+                    button.btn.btn-secondary(type='button', data-dismiss='modal') Cancel
+                    button#addSupplyFinishBtn.btn.btn-primary(type='button') Finish
+
+    #modalSupplyInfo.modal.fade(tabindex='-1', role='dialog', data-backdrop="static")
+        .modal-dialog.med-modal(role='document')
+            .modal-content
+                .modal-header
+                    h5.modal-title  Supply Information
+                    button#deleteSupplyBtn.btn.btn-danger.bmd-btn-fab.bmd-btn-fab-sm(style="display: none;")
+                        |       <i class="material-icons md-24 md-light">delete</i>
+                .modal-body.container
+                    .row
+                        .col.align-self-start Name
+                        #supplyInfoName.col.align-self-end
+                    .row
+                        .col.align-self-start Location
+                        #supplyInfoLocation.col.align-self-end
+                    .row
+                        .col.align-self-start Quantity
+                        #supplyInfoQuantity.col.align-self-end
+                    .row
+                        .col.align-self-start Post time
+                        #supplyInfoPostTime.col.align-self-end
+                    .row
+                        .col.align-self-start Description
+                        #supplyInfoDescription.col.align-self-end
+                    .row
+                        .col.align-self-start Owner
+                        #supplyInfoOwner.col.align-self-end
+                    .row.supply-requester
+                        .col.align-self-start Requester
+                        #supplyInfoRequester.col.align-self-end
+                    .page-hidden-info.hidden-supplyId
+                    .page-hidden-info.hidden-ownerId
+
+                .modal-footer
+                    button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+                    button#requestSupplyBtn.btn.btn-primary(type='button', data-dismiss='modal') Request
+
+    #modalDeleteSupply.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+        .modal-dialog.short-modal(role='document')
+            .modal-content
+                .modal-header
+                    h5.modal-title Delete Supply Confirm
+                .modal-body
+                .modal-footer
+                    button.btn.btn-secondary(type='button', data-dismiss='modal') Cancel
+                    button#deleteSupplyConfirmBtn.btn.btn-primary(type='button', data-dismiss='modal') OK

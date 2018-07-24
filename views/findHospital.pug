@@ -1,0 +1,22 @@
+block content
+	.container#find_hospital_window(style='display: none;')
+		.card-spacer
+		h5.card-title Drag and drop patients:
+
+		.row
+			.col-6#find-hospital-patientsColumn
+				.card-spacer
+				.card.card-body
+					.card-header
+						h5 Patients
+					ul.list-group.list-group-flush.sortable#find-hospital-patientList
+
+			.col-6#find-hospital-hospitalsColumn
+				.card-spacer
+				#find-hospital-hospitalList
+
+		.card-spacer
+		.card
+			.card-body
+				button#find-hospital-cancelBtn.btn.btn-danger.float-left(type='button') Cancel
+				button#find-hospital-submitBtn.btn.btn-primary.float-right(type='button') Submit

@@ -1,0 +1,173 @@
+block content
+    .card#step3card
+        .card-body
+            h5.card-title Provide Patient's Data
+            .form-group#patientForm
+                label.form-control-label(for='patient') Are you a patient
+                .spacer
+                    label.radio-inline.with-gap
+                        input#citizenPatientYes(type='radio', name='patient', value='1')
+                        |  Yes
+                    label.radio-inline.with-gap
+                        input#citizenPatientNo(type='radio', name='patient', value='2')
+                        |  No
+            .form-group#ageForm
+                label(for='age') Age
+                .spacer
+                    input#citizenAge.form-control(type='number', name='age', min='0', max='200' )
+            .form-group#sexForm
+                label.form-control-label(for='sex') Sex
+                .spacer
+                    label.radio-inline.with-gap
+                        input#citizenMale(type='radio', name='sex', value='1')
+                        |  Male
+                    label.radio-inline.with-gap
+                        input#citizenFemale(type='radio', name='sex', value='2')
+                        |  Female
+                    label.radio-inline.with-gap
+                        input#citizenOther(type='radio', name='sex', value='3')
+                        |  Other
+            .form-group#conscientForm
+                label.form-control-label(for='conscient') Conscient
+                .spacer
+                    label.radio-inline.with-gap
+                        input#citizenConscientYes(type='radio', name='conscient', value='1')
+                        |  Yes
+                    label.radio-inline.with-gap
+                        input#citizenConscientNo(type='radio', name='conscient', value='2')
+                        |  No
+            .form-group#smokeForm
+                label.form-control-label(for='smoke') Smoke
+                .spacer
+                    label.radio-inline.with-gap
+                        input#citizenSmokeYes(type='radio', name='smoke', value='1', onblur="fillSmokeDetails(this)")
+                        |  Yes
+                    label.radio-inline.with-gap
+                        input#citizenSmokeNo(type='radio', name='smoke', value='2', onblur="fillSmokeDetails(this)")
+                        |  No
+            .card-body#smokeFormDiv
+                .form-group
+                    .label.form-control-label(for='smokeColor') Smoke Color
+                    input#smokeColor.form-control(type='text')
+                .form-group
+                    .label.form-control-label(for='smokeQuantity') Smoke Quantity
+                    input#smokeQuantity.form-control(type='text')
+            .form-group#breathingForm
+                label.form-control-label(for='breathing') Breathing
+                .spacer
+                    label.radio-inline.with-gap
+                        input#citizenBreathingYes(type='radio', name='breathing', value='1')
+                        |  Yes
+                    label.radio-inline.with-gap
+                        input#citizenBreathingNo(type='radio', name='breathing', value='2')
+                        |  No
+            .form-group#chiefComplaintForm
+                label(for='chiefComplaint') Chief Complaint
+                textarea#citizenChiefComplaint.form-control(aria-describedby='chiefComplaint')
+            .form-group#flameForm
+                label.form-control-label(for='flame') Flame
+                .spacer
+                    label.radio-inline.with-gap
+                        input#citizenFlameYes(type='radio', name='flame', value='1')
+                        |  Yes
+                    label.radio-inline.with-gap
+                        input#citizenFlameNo(type='radio', name='flame', value='2')
+                        |  No
+            .form-group#fireInjuryForm
+                label.form-control-label(for='injury') Fire Injury
+                .spacer
+                    label.radio-inline.with-gap
+                        input#citizenFireInjuryYes(type='radio', name='fireInjury', value='1')
+                        |  Yes
+                    label.radio-inline.with-gap
+                        input#citizenFireInjuryNo(type='radio', name='fireInjury', value='2')
+                        |  No
+            .form-group#hazardousForm
+                label.form-control-label(for='hazardous') Hazardous materials
+                .spacer
+                    label.radio-inline.with-gap
+                        input#citizenHazardousYes(type='radio', name='hazardous', value='1')
+                        |  Yes
+                    label.radio-inline.with-gap
+                        input#citizenHazardousNo(type='radio', name='hazardous', value='2')
+                        |  No
+            .form-group#peopleForm
+                label(for='people') Number of people inside
+                .spacer
+                    input#citizenPeople.form-control(type='number', name='people' )
+            .form-group#getOutForm
+                label.form-control-label(for='getOut') Can they get out?
+                .spacer
+                    label.radio-inline.with-gap
+                        input#citizenGetOutYes(type='radio', name='getOut', value='1')
+                        |  Yes
+                    label.radio-inline.with-gap
+                        input#citizenGetOutNo(type='radio', name='getOut', value='2')
+                        |  No
+            .form-group#weaponForm
+                label.form-control-label(for='weapon') Weapon
+                .spacer
+                    label.radio-inline.with-gap
+                        input#citizenWeaponYes(type='radio', name='weapon', value='1')
+                        |  Yes
+                    label.radio-inline.with-gap
+                        input#citizenWeaponNo(type='radio', name='weapon', value='2')
+                        |  No
+            .form-group#weaponInjuryForm
+                label.form-control-label(for='weaponInjury') Weapon Injury
+                .spacer
+                    label.radio-inline.with-gap
+                        input#citizenWeaponInjuryYes(type='radio', name='weaponInjury', value='1')
+                        |  Yes
+                    label.radio-inline.with-gap
+                        input#citizenWeaponInjuryNo(type='radio', name='weaponInjury', value='2')
+                        |  No
+            .form-group#suspectDescriptionForm
+                label(for='suspectDescription') Suspect Description
+                textarea#citizenSuspectDescription.form-control(aria-describedby='suspectDescription')
+            .form-group#suspectLeftForm
+                label.form-control-label(for='suspectLeft') Suspect Left?
+                .spacer
+                    label.radio-inline.with-gap
+                        input#citizenSuspectLeftYes(type='radio', name='suspectLeft', value='1')
+                        |  Yes
+                    label.radio-inline.with-gap
+                        input#citizenSuspectLeftNo(type='radio', name='suspectLeft', value='2')
+                        |  No
+            .form-group#safeForm
+                label.form-control-label(for='safe') Are you safe?
+                .spacer
+                    label.radio-inline.with-gap
+                        input#citizenSafeYes(type='radio', name='safe', value='1')
+                        |  Yes
+                    label.radio-inline.with-gap
+                        input#citizenSafeNo(type='radio', name='safe', value='2')
+                        |  No
+            .form-group#crimeDetailForm
+                label(for='citizenCrimeDetail') Crime Detail
+                textarea#citizenCrimeDetail.form-control(aria-describedby='crimeDetail')
+            .form-group#patientsProfileForm(style='display:none;')
+                .card-spacer
+                h5.card-title Other information
+                p
+                    b Name: &nbsp;
+                    span#citizenAnswerName
+                p
+                    b Address: &nbsp;
+                    span#citizenAnswerAddress
+                p
+                    b Phone number: &nbsp;
+                    a#citizenAnswerPhoneNumber
+                p
+                    b Email: &nbsp;
+                    a#citizenAnswerEmail
+                .card-spacer
+                h5.card-title Patient's medical information
+                p#citizenAnswerMedicalAllergies Allergies: &nbsp;
+                p#citizenAnswerMedicalCondition Conditions: &nbsp;
+                p#citizenAnswerMedicalDrugs Drugs: &nbsp;
+
+                .card-spacer
+                h5.card-title Patient's emergency contact(s)
+                #citizenAnswerEmergencyContacts
+            button#treatPatientBtn.btn.btn-primary Treat Patient

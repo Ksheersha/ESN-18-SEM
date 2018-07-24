@@ -1,0 +1,25 @@
+block content
+.container#incident_firstResponder_window(style='display: none')
+  .card-spacer
+  .card#myIncidentsCardFirstResponder
+    .card-body
+      h5.card-title My Incident
+      table.table.table-striped
+        tbody#myIncidentTableBodyFirstResponder
+
+  .card-spacer
+  .card#otherOpenIncidentsCardFirstResponder
+    .card-body
+      h5.card-title Other Open Incidents
+      table.table.table-striped
+        tbody#otherOpenIncidentsTableBodyFirstResponder
+
+  .card-spacer
+  .card#closedIncidentsCardFirstResponder
+    .card-body
+      h5.card-title Closed Incidents
+      table.table.table-striped
+        tbody#closedIncidentsTableBodyFirstResponder
+
+  button#addIncidentButton.btn.btn-primary.bmd-btn-fab.float-right(type='button')
+    i.material-icons.md-24.md-light.center(style="vertical-align: middle") add

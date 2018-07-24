@@ -1,0 +1,16 @@
+block content
+    .container#first_aid_dir_window(style='display: none')
+        .panel
+            .card
+                .card-body
+                    h3.card-title First Aid Instruction
+                        .list-group#first_aid_list
+        button.btn.btn-primary.btn-raised#showNurseDirectory
+            | Nurse Directory
+    .container#first_aid_inst_window(style='display: none')
+        .panel
+            .card
+                .card-body
+                    .list-group
+                        .list-group-item.home-nav#first_aid_category
+                    .p#first_aid_content(style='text-align:justify;')
